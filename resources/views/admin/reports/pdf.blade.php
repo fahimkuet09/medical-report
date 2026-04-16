@@ -71,6 +71,21 @@
             vertical-align: top;
             line-height: 1.3;
         }
+        .echo-signature {
+            margin-top: 16pt;
+            text-align: right;
+            font-size: 9.5pt;
+            line-height: 1.42;
+            color: #000;
+        }
+        .echo-signature-line {
+            margin: 0;
+            padding: 0;
+        }
+        .echo-signature-name {
+            font-weight: bold;
+            margin-bottom: 3pt;
+        }
     </style>
 </head>
 <body>
@@ -147,5 +162,7 @@
             <div class="echo-remarks-body">{!! $report->remarks !!}</div>
         </div>
     @endif
+
+    @include('admin.reports.partials.signature')
 </body>
 </html>

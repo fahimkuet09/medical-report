@@ -60,6 +60,18 @@
         .echo-report .echo-remarks-body-tight table { font-size: 0.9rem; }
         .echo-report .echo-remarks-body-tight th,
         .echo-report .echo-remarks-body-tight td { padding: 0.2rem 0.35rem; }
+        .echo-report .echo-signature {
+            margin-top: 2rem;
+            text-align: right;
+            font-size: 0.875rem;
+            line-height: 1.45;
+            color: #000;
+        }
+        .echo-report .echo-signature-line { margin: 0; }
+        .echo-report .echo-signature-name {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
         @media print {
             @page {
                 margin-top: {{ (int) config('echo_reports.letterhead_top_mm', 40) }}mm;
@@ -84,6 +96,10 @@
             .echo-report header.mb-6 { margin-bottom: 0.75rem !important; }
             .echo-report .echo-remarks-block {
                 margin-top: 1rem;
+            }
+            .echo-report .echo-signature {
+                margin-top: 1.75rem;
+                font-size: 0.82rem;
             }
         }
     </style>
@@ -192,6 +208,8 @@
                     </div>
                 </div>
             @endif
+
+            @include('admin.reports.partials.signature')
 
             <footer class="no-print mt-10 border-t border-slate-200 pt-4 text-center text-xs text-slate-500">
                 <p>System record — {{ config('app.name') }} · Created {{ $report->created_at?->format('d/m/Y H:i') }} · Updated {{ $report->updated_at?->format('d/m/Y H:i') }}</p>

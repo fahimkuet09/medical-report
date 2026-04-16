@@ -27,4 +27,25 @@ return [
     */
     'letterhead_top_mm' => (int) env('ECHO_LETTERHEAD_TOP_MM', 40),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Report signature block (PDF + screen)
+    |--------------------------------------------------------------------------
+    |
+    | Right-aligned doctor block at the end of the report. Override all lines with
+    | ECHO_REPORT_SIGNATURE_LINES (pipe-separated).
+    |
+    */
+    'signature_lines' => filled(env('ECHO_REPORT_SIGNATURE_LINES'))
+        ? array_values(array_filter(array_map(
+            'trim',
+            explode('|', (string) env('ECHO_REPORT_SIGNATURE_LINES'))
+        )))
+        : [
+            'Dr. Md Akhtaruzzaman',
+            'MBBS, MD (Cardiology)',
+            'Associate Professor of Cardiology',
+            'Clinical & Interventional Cardiologist',
+            'Bangladesh Medical College Hospital',
+        ],
 ];
