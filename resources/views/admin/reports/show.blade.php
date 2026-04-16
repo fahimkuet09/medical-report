@@ -62,7 +62,10 @@
         .echo-report .echo-remarks-body-tight td { padding: 0.2rem 0.35rem; }
         @media print {
             @page {
-                margin: 10mm 10mm 12mm 10mm;
+                margin-top: {{ (int) config('echo_reports.letterhead_top_mm', 40) }}mm;
+                margin-right: 10mm;
+                margin-bottom: 12mm;
+                margin-left: 10mm;
             }
             body {
                 background: #fff !important;
@@ -76,7 +79,7 @@
                 max-width: 100% !important;
             }
             .echo-report {
-                padding: 0.35in 0.4in 0.45in !important;
+                padding: 0 0.4in 0.45in !important;
             }
             .echo-report header.mb-6 { margin-bottom: 0.75rem !important; }
             .echo-report .echo-remarks-block {
