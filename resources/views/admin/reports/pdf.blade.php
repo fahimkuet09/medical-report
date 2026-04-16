@@ -6,20 +6,20 @@
     <style>
         body {
             font-family: dejavusans, sans-serif;
-            font-size: 10.5pt;
+            font-size: 10pt;
             color: #000;
             margin: 0;
             padding: 0;
         }
         .echo-title {
             text-align: center;
-            font-size: 15pt;
+            font-size: 14pt;
             font-weight: bold;
-            margin: 0 0 14pt 0;
+            margin: 0 0 8pt 0;
         }
         .echo-patient-box {
             border: 1px solid #000;
-            padding: 10pt 11pt 11pt 11pt;
+            padding: 7pt 8pt 8pt 8pt;
         }
         .echo-patient-table {
             width: 100%;
@@ -28,18 +28,49 @@
         }
         .echo-patient-table td {
             vertical-align: top;
-            padding: 2.5pt 3pt;
-            font-size: 10.5pt;
-            line-height: 1.45;
+            padding: 1.5pt 2pt;
+            font-size: 10pt;
+            line-height: 1.35;
         }
         .echo-col-left { width: 36%; text-align: left; }
         .echo-col-mid { width: 28%; text-align: center; }
         .echo-col-right { width: 36%; text-align: right; }
         .echo-label { font-weight: bold; }
-        .echo-remarks-block { margin-top: 22pt; }
-        .echo-remarks-heading { font-weight: bold; margin-bottom: 6pt; font-size: 10.5pt; }
-        .echo-remarks-body { font-size: 10.5pt; line-height: 1.45; }
-        .echo-remarks-body p { margin: 0 0 4pt 0; }
+        .echo-remarks-block { margin-top: 9pt; }
+        .echo-remarks-heading { font-weight: bold; margin: 0 0 3pt 0; font-size: 10pt; }
+        .echo-remarks-body { font-size: 10pt; line-height: 1.35; }
+        .echo-remarks-body p { margin: 0 0 2.5pt 0; }
+        .echo-remarks-body p:last-child { margin-bottom: 0; }
+        .echo-remarks-body h1,
+        .echo-remarks-body h2,
+        .echo-remarks-body h3,
+        .echo-remarks-body h4 {
+            font-size: 10pt;
+            font-weight: bold;
+            margin: 5pt 0 2pt 0;
+            line-height: 1.3;
+        }
+        .echo-remarks-body h1:first-child,
+        .echo-remarks-body h2:first-child,
+        .echo-remarks-body h3:first-child { margin-top: 0; }
+        .echo-remarks-body ol,
+        .echo-remarks-body ul {
+            margin: 2pt 0 3pt 0;
+            padding-left: 14pt;
+        }
+        .echo-remarks-body li { margin: 0 0 1.5pt 0; line-height: 1.35; }
+        .echo-remarks-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3pt 0;
+            font-size: 9.5pt;
+        }
+        .echo-remarks-body th,
+        .echo-remarks-body td {
+            padding: 2pt 3pt;
+            vertical-align: top;
+            line-height: 1.3;
+        }
     </style>
 </head>
 <body>

@@ -47,14 +47,22 @@
         .echo-report .echo-remarks-heading {
             font-weight: 700;
             font-size: 0.95rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
         }
         .echo-report .echo-remarks-block {
-            margin-top: 2.75rem;
+            margin-top: 1.1rem;
         }
+        .echo-report .echo-remarks-body-tight p { margin-top: 0; margin-bottom: 0.35rem; }
+        .echo-report .echo-remarks-body-tight p:last-child { margin-bottom: 0; }
+        .echo-report .echo-remarks-body-tight ol,
+        .echo-report .echo-remarks-body-tight ul { margin: 0.25rem 0 0.35rem; padding-left: 1.1rem; }
+        .echo-report .echo-remarks-body-tight li { margin-bottom: 0.2rem; }
+        .echo-report .echo-remarks-body-tight table { font-size: 0.9rem; }
+        .echo-report .echo-remarks-body-tight th,
+        .echo-report .echo-remarks-body-tight td { padding: 0.2rem 0.35rem; }
         @media print {
             @page {
-                margin: 12mm 12mm 16mm 12mm;
+                margin: 10mm 10mm 12mm 10mm;
             }
             body {
                 background: #fff !important;
@@ -68,10 +76,11 @@
                 max-width: 100% !important;
             }
             .echo-report {
-                padding: 0.5in 0.5in 0.6in !important;
+                padding: 0.35in 0.4in 0.45in !important;
             }
+            .echo-report header.mb-6 { margin-bottom: 0.75rem !important; }
             .echo-report .echo-remarks-block {
-                margin-top: 3.25rem;
+                margin-top: 1rem;
             }
         }
     </style>
@@ -175,7 +184,7 @@
             @if (! empty($report->remarks))
                 <div class="echo-remarks-block text-black">
                     <p class="echo-remarks-heading">Remarks :</p>
-                    <div class="max-w-none text-[0.95rem] leading-relaxed text-black [&_p]:my-1">
+                    <div class="echo-remarks-body-tight max-w-none text-[0.92rem] leading-snug text-black">
                         {!! $report->remarks !!}
                     </div>
                 </div>
